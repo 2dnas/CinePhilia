@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Homework3</string>
+    <string name="password">Password</string>
+    <string name="mobile">Mobile</string>
+    <string name="sign_in_app">Sign In App</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="registration">Registration</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="log_out">Log Out</string>
+</resources>
