@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class RegistrationActivity extends AppCompatActivity {
     String NAME_CODE = "name";
 
@@ -22,9 +24,9 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         registrationName = findViewById(R.id.registrationName);
-        registrationLocation = findViewById(R.id.registrationLocation);
         registrationPassword = findViewById(R.id.registrationPassword);
         registrationPasswordConfirm = findViewById(R.id.confirmPassword);
         registrationPhone = findViewById(R.id.registrationMobile);
@@ -35,7 +37,6 @@ public class RegistrationActivity extends AppCompatActivity {
 
     public void Registration(View view) {
         String name = registrationName.getText().toString();
-        String location = registrationLocation.getText().toString();
         String password = registrationPassword.getText().toString();
         String confirmPassword = registrationPasswordConfirm.getText().toString();
         String phone = registrationPhone.getText().toString();
@@ -45,7 +46,7 @@ public class RegistrationActivity extends AppCompatActivity {
             return;
         }
 
-        database.saveUser(name,location,password,phone);
+        database.saveUser(name,password,phone);
 
         Toast.makeText(this, "You are successfully registered", Toast.LENGTH_SHORT).show();
 

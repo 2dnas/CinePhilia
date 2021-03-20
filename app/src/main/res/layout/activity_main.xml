@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@drawable/sign_in_background"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_gravity="center"
+        android:backgroundTint="#FFFFFF"
         android:layout_margin="10dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="20dp"
@@ -33,9 +35,9 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
-                android:textColor="#5A2020"
+                android:textColor="#8E3030"
                 android:textSize="40sp"
-                android:text="@string/sign_in_app"/>
+                android:text="@string/cinephilia"/>
 
 
             <EditText
@@ -60,13 +62,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="signIn"
+                android:backgroundTint="#8E3030"
                 android:text="@string/sign_in" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Registration"
+                android:backgroundTint="#8E3030"
+                android:onClick="signUp"
                 android:text="@string/sign_up" />
         </LinearLayout>
 

@@ -6,7 +6,17 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="#FFFFFF"
     tools:context=".RegistrationActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="#8E3030"
+        android:textSize="70sp"
+        android:text="@string/cinephilia"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -33,20 +43,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:hint="Enter Your Name" />
+                android:gravity="center"
+                android:hint="@string/enter_username" />
 
-            <EditText
-                android:id="@+id/registrationLocation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:hint="Location" />
+
 
             <EditText
                 android:id="@+id/registrationPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPassword"
                 android:hint="@string/password"/>
 
@@ -54,6 +61,7 @@
                 android:id="@+id/confirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="10"
                 android:inputType="textPassword"
                 android:hint="@string/confirm_password"/>
@@ -63,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="phone"
                 android:hint="@string/enter_mobile_number"/>
 
@@ -71,6 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="Registration"
+                android:backgroundTint="#8E3030"
                 android:layout_margin="5dp"
                 android:text="@string/registration" />
 

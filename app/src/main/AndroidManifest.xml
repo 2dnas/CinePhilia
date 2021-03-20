@@ -11,7 +11,8 @@
         android:theme="@style/Theme.Homework3">
         <activity android:name=".RecordsActivity"></activity>
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

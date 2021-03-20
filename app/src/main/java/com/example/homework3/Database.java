@@ -27,7 +27,6 @@ public class Database extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_NAME + " ("
                 + COLUMN_NAME + " text,"
-                + COLUMN_LOCATION + " text,"
                 +COLUMN_PASSWORD + " text,"
                 +COLUMN_PHONE + " text)"
         );
@@ -38,11 +37,10 @@ public class Database extends SQLiteOpenHelper {
 
     }
 
-    public void saveUser(String name,String location, String password, String phone){
+    public void saveUser(String name, String password, String phone){
         ContentValues contentValues = new ContentValues();
 
         contentValues.put(COLUMN_NAME,name);
-        contentValues.put(COLUMN_LOCATION,location);
         contentValues.put(COLUMN_PASSWORD,password);
         contentValues.put(COLUMN_PHONE,phone);
 
@@ -55,11 +53,10 @@ public class Database extends SQLiteOpenHelper {
         cursor.moveToFirst();
 
         String name = cursor.getString(cursor.getColumnIndex(COLUMN_NAME));
-        String location = cursor.getString(cursor.getColumnIndex(COLUMN_LOCATION));
         String password = cursor.getString(cursor.getColumnIndex(COLUMN_PASSWORD));
         String phone = cursor.getString(cursor.getColumnIndex(COLUMN_PHONE));
 
-        return name + " " + location + " "+ password + " "+ password + " " + phone;
+        return name + " "  + " "+ password + " "+ password + " " + phone;
     }
 
     public String getUserPhone(String phone){
